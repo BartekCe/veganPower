@@ -9,6 +9,7 @@ public class Exercise {
     public Exercise(String name, float weight, int reps) {
         this.name = name;
         this.weight = weight;
+        this.reps = reps;
     }
 
     public int getReps() {
@@ -35,5 +36,12 @@ public class Exercise {
         this.weight = weight;
     }
 
-
+    @Override
+    public String toString() {
+        return "Exercise{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", reps=" + reps +
+                '}';
+    }
 }
