@@ -12,14 +12,10 @@ public class TrainingUnitService {
 
     private final ExerciseService exerciseService;
 
-
-
     @Autowired
     public TrainingUnitService(ExerciseService exerciseService) {
         this.exerciseService = exerciseService;
     }
-
-//    TrainingUnit trainingUnit_1 = new TrainingUnit(1L,exerciseService.getExercises(),2, LocalDate.now());
 
     public List<TrainingUnit> getTrainingUnits(){
         return List.of(

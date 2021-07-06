@@ -7,29 +7,21 @@ import java.util.List;
 
 public class TrainingUnit {
 
-    private Long id;
+    private final Long id;
     private List<Exercise> exercises;
 
-    private int sets;
-    private LocalDate date;
+    private final int sets;
+    private final LocalDate dateOfTraining;
 
-
-
-
-    public TrainingUnit(Long id, List<Exercise> exercises, int sets, LocalDate date) {
+    public TrainingUnit(Long id, List<Exercise> exercises, int sets, LocalDate dateOfTraining) {
         this.id = id;
         this.exercises = exercises;
         this.sets = sets;
-        this.date = date;
-
+        this.dateOfTraining = dateOfTraining;
     }
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public List<Exercise> getExercises() {
@@ -41,20 +33,8 @@ public class TrainingUnit {
     }
 
 
-    public int getSets() {
-        return sets;
-    }
-
-    public void setSets(int sets) {
-        this.sets = sets;
-    }
-
-    public LocalDate getDate() {
-        return date;
-    }
-
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public LocalDate getDateOfTraining() {
+        return dateOfTraining;
     }
 
     @Override
@@ -63,7 +43,7 @@ public class TrainingUnit {
                 "id=" + id +
                 ", exercises=" + exercises +
                 ", sets=" + sets +
-                ", date=" + date +
+                ", date=" + dateOfTraining +
                 '}';
     }
 }

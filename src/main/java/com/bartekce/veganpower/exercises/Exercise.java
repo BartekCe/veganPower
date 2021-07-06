@@ -1,10 +1,9 @@
 package com.bartekce.veganpower.exercises;
 
 public class Exercise {
-    private String name;
-    private float weight;
-    private int reps;
-
+    private final String name;
+    private final float weight;
+    private final int reps;
 
     public Exercise(String name, float weight, int reps) {
         this.name = name;
@@ -16,24 +15,12 @@ public class Exercise {
         return reps;
     }
 
-    public void setReps(int reps) {
-        this.reps = reps;
-    }
-
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public float getWeight() {
         return weight;
-    }
-
-    public void setWeight(float weight) {
-        this.weight = weight;
     }
 
     @Override
