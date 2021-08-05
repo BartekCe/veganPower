@@ -23,8 +23,8 @@ public class ExerciseController {
         return exerciseService.saveExercises(exercises);
     }
 
-    @GetMapping(path = "/exercise/{name}")
-    public Exercise findExerciseByName(@PathVariable String name) {
+    @GetMapping(path = "/exerciseStats/{name}")
+    public List<Exercise> findExerciseByName(@PathVariable String name) {
         return exerciseService.getExerciseByName(name);
     }
 
@@ -32,5 +32,6 @@ public class ExerciseController {
     public List<Exercise> findAllExercises() {
         return exerciseService.getExercises();
     }
+
 
 }

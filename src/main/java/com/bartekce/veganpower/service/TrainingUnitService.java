@@ -28,11 +28,10 @@ public class TrainingUnitService {
 
     public TrainingUnit updateTrainingUnit(TrainingUnit trainingUnit) {
         TrainingUnit updateTrainingUnit = trainingUnitRepository.findById(trainingUnit.getId()).orElse(null);
+        assert updateTrainingUnit != null;
         updateTrainingUnit.setDateOfTraining(trainingUnit.getDateOfTraining());
-        updateTrainingUnit.setSets(trainingUnit.getSets());
         updateTrainingUnit.setExercises(trainingUnit.getExercises());
         return trainingUnitRepository.save(updateTrainingUnit);
     }
-
 }
 

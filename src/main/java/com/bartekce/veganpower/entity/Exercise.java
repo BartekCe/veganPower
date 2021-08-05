@@ -21,10 +21,12 @@ public class Exercise {
     private String name;
     private float weight;
     private int reps;
+    private int sets;
 
-    public Exercise(String name, float weight, int reps) {
+    public Exercise(String name, float weight, int reps, int sets) {
         this.name = name;
         this.weight = weight;
         this.reps = reps;
+        this.sets = sets;
     }
 }
