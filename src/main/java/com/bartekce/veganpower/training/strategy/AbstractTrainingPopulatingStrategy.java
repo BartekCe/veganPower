@@ -8,7 +8,6 @@ import java.util.List;
 
 public abstract class AbstractTrainingPopulatingStrategy implements TrainingPopulatingStrategy {
     private final TrainingStrategy handledTrainingStrategy;
-    final TrainingStatus PLANNED = TrainingStatus.PLANNED;
 
     protected AbstractTrainingPopulatingStrategy(TrainingStrategy handledTrainingStrategy) {
         this.handledTrainingStrategy = handledTrainingStrategy;

@@ -6,7 +6,7 @@ import com.bartekce.veganpower.training.TrainingUnitService;
 
 import java.util.List;
 
-public class TrainingStrategy_21_to_25 extends AbstractTrainingPopulatingStrategy{
+public class TrainingStrategy_21_to_25 extends AbstractTrainingPopulatingStrategy {
     public TrainingStrategy_21_to_25() {
         super(TrainingStrategy.TRAINING_FOR_21_TO_25);
     }
@@ -14,11 +14,11 @@ public class TrainingStrategy_21_to_25 extends AbstractTrainingPopulatingStrateg
     @Override
     public List<TrainingUnit> populateTraining(TrainingUnitService trainingUnitService) {
         return trainingUnitService.saveAll(List.of(
-                new TrainingUnit(PLANNED, 60, List.of(new Exercise(List.of(12, 17, 13, 13, 17)))),
-                new TrainingUnit(PLANNED, 90, List.of(new Exercise(List.of(14, 19, 14, 14, 19)))),
-                new TrainingUnit(PLANNED, 120, List.of(new Exercise(List.of(16, 21, 15, 15, 21)))),
-                new TrainingUnit(PLANNED, 60, List.of(new Exercise(List.of(18, 22, 16, 16, 21)))),
-                new TrainingUnit(PLANNED, 90, List.of(new Exercise(List.of(20, 25, 20, 20, 23)))),
-                new TrainingUnit(PLANNED, 120, List.of(new Exercise(List.of(23, 28, 22, 22, 25))))));
+                new TrainingUnit(60, List.of(new Exercise(List.of(12, 17, 13, 13, 17)))),
+                new TrainingUnit(90, List.of(new Exercise(List.of(14, 19, 14, 14, 19)))),
+                new TrainingUnit(120, List.of(new Exercise(List.of(16, 21, 15, 15, 21)))),
+                new TrainingUnit(60, List.of(new Exercise(List.of(18, 22, 16, 16, 21)))),
+                new TrainingUnit(90, List.of(new Exercise(List.of(20, 25, 20, 20, 23)))),
+                new TrainingUnit(120, List.of(new Exercise(List.of(23, 28, 22, 22, 25))))));
     }
 }

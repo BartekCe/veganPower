@@ -14,8 +14,8 @@ public class TrainingStrategy_51_to_55 extends AbstractTrainingPopulatingStrateg
     @Override
     public List<TrainingUnit> populateTraining(TrainingUnitService trainingUnitService) {
         return trainingUnitService.saveAll(List.of(
-                new TrainingUnit(PLANNED, 60, List.of(new Exercise(List.of(30, 39, 35, 35, 42)))),
-                new TrainingUnit(PLANNED, 45, List.of(new Exercise(List.of(20, 20, 23, 23, 20, 20, 18, 18, 53)))),
-                new TrainingUnit(PLANNED, 45, List.of(new Exercise(List.of(22, 22, 30, 30, 25, 25, 18, 18, 55))))));
+                new TrainingUnit(60, List.of(new Exercise(List.of(30, 39, 35, 35, 42)))),
+                new TrainingUnit(45, List.of(new Exercise(List.of(20, 20, 23, 23, 20, 20, 18, 18, 53)))),
+                new TrainingUnit(45, List.of(new Exercise(List.of(22, 22, 30, 30, 25, 25, 18, 18, 55))))));
     }
 }
