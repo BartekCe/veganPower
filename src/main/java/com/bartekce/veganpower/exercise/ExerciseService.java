@@ -1,7 +1,5 @@
-package com.bartekce.veganpower.service;
+package com.bartekce.veganpower.exercise;
 
-import com.bartekce.veganpower.entity.Exercise;
-import com.bartekce.veganpower.repository.ExerciseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,5 +27,7 @@ public class ExerciseService {
         return exerciseRepository.findAllByName(name);
     }
 
-
+    public ExerciseStats getExerciseStats(String exerciseName) {
+        return new ExerciseStats(getExerciseByName(exerciseName));
+    }
 }

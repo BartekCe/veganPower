@@ -1,7 +1,5 @@
-package com.bartekce.veganpower.controller;
+package com.bartekce.veganpower.exercise;
 
-import com.bartekce.veganpower.entity.Exercise;
-import com.bartekce.veganpower.service.ExerciseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,5 +31,9 @@ public class ExerciseController {
         return exerciseService.getExercises();
     }
 
+    @GetMapping("/stats/{exerciseName}")
+    public ExerciseStats getExerciseStats(@PathVariable String exerciseName){
+        return exerciseService.getExerciseStats(exerciseName);
+    }
 
 }
