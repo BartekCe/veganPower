@@ -24,8 +24,8 @@ public class TrainingUnit {
     @OneToMany(targetEntity = Exercise.class, cascade = CascadeType.ALL)
     private List<Exercise> exercises;
 
-    public TrainingUnit(TrainingStatus trainingStatus,int breakTime, List<Exercise> exercises) {
-        this.trainingStatus = trainingStatus;
+    public TrainingUnit(int breakTime, List<Exercise> exercises) {
+        this.trainingStatus = TrainingStatus.PLANNED;
         this.exercises = exercises;
         this.breakTime = breakTime;
     }
