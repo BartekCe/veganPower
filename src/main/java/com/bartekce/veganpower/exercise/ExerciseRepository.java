@@ -1,6 +1,5 @@
-package com.bartekce.veganpower.repository;
+package com.bartekce.veganpower.exercise;
 
-import com.bartekce.veganpower.entity.Exercise;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -14,4 +13,5 @@ public interface ExerciseRepository extends JpaRepository<Exercise, Long> {
     Exercise findByName(String name);
 
     List<Exercise> findAllByName(String name);
+
 }
